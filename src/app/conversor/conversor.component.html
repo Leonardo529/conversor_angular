@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row justify-content-center">
+        
+        <div class="container text-center col-md-12 mx-auto">
+            <h1 class="card-title text-center mb-4">Conversor de Moedas</h1>
+
+            <div class="form-group">
+                <label for="valor">Valor em reais:</label>
+                <input placeholder="Insira o valor (em real) aqui:" type="number" class="form-control" 
+                name="real" for ="real" [(ngModel)]="real">
+            </div>
+            <br>
+
+            <div class="form-group">
+                <label for="real_dolar">Câmbio Dólar(USD)</label>
+                <input placeholder="Insira a cotação aqui:" type="number" class="form-control"
+                 name="real_dolar" for="real_dolar" [(ngModel)]="real_dolar">
+            </div>
+            <br>
+
+            <div class="form-group">
+                <label for="real_euro">Câmbio Euro(EUR)</label>
+                <input placeholder="Insira a cotação aqui:" type="number" class="form-control" 
+                name="real_euro" for="real_euro" [(ngModel)]="real_euro">
+            </div>
+            <br>
+
+            <div class="form-group">
+                <label for="real_libra">Câmbio Libra Esterlina(GBP)</label>
+                <input placeholder="Insira a cotação aqui:" type="number" class="form-control" 
+                name="real_libra" for="real_dolar" [(ngModel)]="real_libra">
+            </div>
+            <br>
+
+            <button class="btn btn-primary btn-block col-md-12" (click)="convertermoeda()">Converter</button>
+            <br>
+            <br>
+
+            <div *ngIf="resultado">
+                <p class="bg-info text-dark">Valor em Dólares: {{resultado.dolar}}</p>
+                <p class="bg-info text-dark">Valor em Euros: {{resultado.euro}}</p>
+                <p class="bg-info text-dark">Valor em Libras Esterlinas: {{resultado.libra}}</p>
+            </div>
+
+        </div>
+    </div>
+</div>
